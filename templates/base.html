@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FRESHFARM CONNECT </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---CSS style-->
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ {% block extra_head %}{% endblock %}
+</head>
+<body>
+   <!--Header-->
+      <header>
+        <nav class="navbar">
+            <div class="logo"><img src="{% static 'images/Logo.png' %}" alt="Freshfarm Connect"></div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+              </button>
+            <ul class="nav-links">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About Us </a></li>
+                <li><a href="{% url 'market' %}">Marketplace </a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            <div class="icons">
+                <a href=""><i class="fas fa-user"></i> Log in</a> 
+                <a href="checkout.html"><i class="fas fa-shopping-cart"></i> Cart</a> 
+            </div>
+       </nav>
+    </header>
+   <main>
+    {% block content %}
+    {% endblock %}
+   </main>
+
+   <!--Footer-->
+      <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Freshfarm Connect</p>
+          <nav class="footer-links">
+            <a href="/about">About Us</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+      </footer>
+ 
+</body>
+</html>
