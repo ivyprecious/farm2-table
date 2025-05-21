@@ -23,7 +23,9 @@
                 <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a></li>
                 <li><a href="">About Us </a></li>
                 <li><a href="{% url 'market' %}" class="{% if request.resolver_match.url_name == 'market' %}active{% endif %}">Marketplace </a></li>
+                <li><a href="">Cart</a></li>
                 <li><a href="">Contact</a></li>
+                <li><a href="">Privacy Policy</a></li>
               </ul>
             <div class="icons">
                 <a href=""><i class="fas fa-user"></i> Log in</a> 
@@ -37,18 +39,82 @@
     {% endblock %}
        </main>
 
-   <!--Footer-->
-      <footer class="site-footer">
-        <div class="footer-content">
-          <p>&copy; 2025 Freshfarm Connect</p>
-          <nav class="footer-links">
-            <a href="/about">About Us</a>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-            <a href="/contact">Contact</a>
-          </nav>
+   <!--Footer start here-->
+   <footer class="footer-section">
+  <div class="container">
+    <!-- Top Row -->
+    <div class="footer-top">
+      <!-- About Us -->
+      <div class="footer-col">
+        <h5>FRESHFARM CONNECT</h5>
+        <p>
+          FreshFarm Connect is your go-to farm-to-table marketplace — connecting you with fresh, local, and sustainable products from trusted farmers. Eat well. Live well. Support local.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-col">
+        <h5>LINKS</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h5>CONTACT</h5>
+        <p>Nairobi, Kenya</p>
+        <p>Email: info@freshfarmconnect.com</p>
+        <p>Phone: +254-792 501 015</p>
+        <p>Phone: +254-745 553 826</p>
+      </div>
+    </div>
+
+    <!-- Middle Row -->
+    <div class="footer-middle">
+      <!-- Newsletter -->
+      <form class="newsletter-form" action="/subscribe" method="post">
+        <label for="newsletter">Subscribe to our newsletter:</label>
+        <div class="newsletter-input-group">
+          <input type="email" id="newsletter" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
         </div>
-      </footer>
+      </form>
+
+      <!-- Social Icons -->
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+     <div class="container mt-3">
+      <!-- Footer Links Section -->
+    <div class="footer-bottom">
+      <div class="links">
+            <a href="/privacy-policy" class="text-white text-decoration-none mx-3">Privacy Policy</a>
+            <a href="/terms-and-conditions" class="text-white text-decoration-none mx-3">Terms & Conditions</a>
+            <a href="/contact-us" class="text-white text-decoration-none mx-3">Contact Us</a>
+        </div>
+      <p><strong>© 2025 FreshFarm Connect. All Rights Reserved.</strong></p>
+      <p>
+         Designed & Developed by
+        <a href="https://www.scitt.tech.it" target="_blank"><strong>Rising Force Cohort 2025</strong></a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  
+     <!--Sticky buttons-->
   <div class="sticky-buttons">
         <a href="https://wa.me/254792501015" title="Chat on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="tel:+254792501015" title="Call Us"><i class="fas fa-phone"></i></a>
